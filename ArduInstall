@@ -1,0 +1,54 @@
+#!/bin/bash
+
+#Script: ArduInstall
+#Creador: Antonio Mónaco
+#Blog: www.peatonet.com
+#Contacto: toni@peatonet.com
+#Función: Instala y desinstala Arduino IDE y Ardublock
+
+           OPCIONES="Instalar Desinstalar Ejecutar Salir"
+           select opt in $OPCIONES; do
+
+               if [ "$opt" = "Instalar" ]; then
+                #Instalamos Arduino IDE
+                  sudo apt-get install -y arduino
+                #Descargamos la última versión de Ardublock
+                  cd /tmp
+                  sudo rm -rf ardu*
+	          rm -rf ~/sketchbook
+                  wget http://cloud.github.com/downloads/taweili/ardublock/ardublock-all.jar
+                #Creamos la jerarquía de directorios en sketchbook
+		  mkdir ~/sketchbook
+                  mkdir ~/sketchbook/tools
+                  mkdir ~/sketchbook/tools/ArduBlockTool
+                  mkdir ~/sketchbook/tools/ArduBlockTool/tool
+                #Movemos ArduBlockTool.jar a su carpeta
+                  mv ardublock-all.jar ~/sketchbook/tools/ArduBlockTool/tool
+		#Ejecutamos Arduino IDE
+		  arduino&
+                exit
+
+
+                elif [ "$opt" = "Desinstalar" ]; then
+		#Borramos ArduBlock
+		  sudo rm -rf ~/sketchbook
+		#Desinstalamos Arduino IDE
+		  sudo apt-get -y remove arduino
+                exit
+
+
+                elif [ "$opt" = "Ejecutar" ]; then
+		#Ejecutamos Arduino IDE
+	          arduino&
+                exit
+
+                elif [ "$opt" = "Salir" ]; then
+                  echo done
+                exit
+
+
+               else
+                clear
+                echo opción errónea
+               fi
+           done
