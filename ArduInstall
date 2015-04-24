@@ -4,51 +4,54 @@
 #Creador: Antonio Mónaco
 #Blog: www.peatonet.com
 #Contacto: toni@peatonet.com
-#Función: Instala y desinstala Arduino IDE y Ardublock
+#Función: Instala, desinstala, y ejecuta Arduino IDE y Ardublock
 
+          #Establecemos las opciónes del menú
            OPCIONES="Instalar Desinstalar Ejecutar Salir"
            select opt in $OPCIONES; do
-
+ 
+	     #Opción "Instalar del menú"
                if [ "$opt" = "Instalar" ]; then
-                #Instalamos Arduino IDE
+                 #Instalamos Arduino IDE
                   sudo apt-get install -y arduino
-                #Descargamos la última versión de Ardublock
+                 #Descargamos la última versión de Ardublock
                   cd /tmp
                   sudo rm -rf ardu*
 	          rm -rf ~/sketchbook
                   wget http://cloud.github.com/downloads/taweili/ardublock/ardublock-all.jar
-                #Creamos la jerarquía de directorios en sketchbook
+                 #Creamos la jerarquía de directorios en sketchbook
 		  mkdir ~/sketchbook
                   mkdir ~/sketchbook/tools
                   mkdir ~/sketchbook/tools/ArduBlockTool
                   mkdir ~/sketchbook/tools/ArduBlockTool/tool
-                #Movemos ArduBlockTool.jar a su carpeta
+                 #Movemos ArduBlockTool.jar a su carpeta
                   mv ardublock-all.jar ~/sketchbook/tools/ArduBlockTool/tool
-		#Ejecutamos Arduino IDE
+		 #Ejecutamos Arduino IDE
 		  arduino&
                 exit
 
-
+	     #Opción "Desinstalar del menú"
                 elif [ "$opt" = "Desinstalar" ]; then
-		#Borramos ArduBlock
+		 #Borramos ArduBlock
 		  sudo rm -rf ~/sketchbook
-		#Desinstalamos Arduino IDE
+		 #Desinstalamos Arduino IDE
 		  sudo apt-get -y remove arduino
                 exit
 
-
+             #Opción "Ejecutar del menú"
                 elif [ "$opt" = "Ejecutar" ]; then
-		#Ejecutamos Arduino IDE
+		 #Ejecutamos Arduino IDE
 	          arduino&
                 exit
 
+             #Opción "Salir del menú"
                 elif [ "$opt" = "Salir" ]; then
                   echo done
                 exit
 
-
-               else
-                clear
-                echo opción errónea
-               fi
-           done
+	     #Opción erronea del menú
+                else
+                  clear
+                  echo opción errónea
+                fi
+                done
