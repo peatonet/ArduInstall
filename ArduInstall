@@ -5,6 +5,7 @@
 #Blog: www.peatonet.com
 #Contacto: toni@peatonet.com
 #Función: Instala, desinstala, y ejecuta Arduino IDE y Ardublock
+#Ejecutar: ./ArduInstall (Sin permisos de root ni sudo)
 
           #Establecemos las opciónes del menú
            OPCIONES="Instalar Desinstalar Ejecutar Salir"
