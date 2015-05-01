@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Script: ArduInstall
-#Creador: Antonio Mónaco
+#Autor: Antonio Mónaco
 #Blog: www.peatonet.com
 #E-mail: toni@peatonet.com
 #Función: Instala, desinstala, y ejecuta Arduino IDE y Ardublock
@@ -11,7 +11,7 @@
           #Establecemos las opciónes del menú
            OPCIONES="Instalar Desinstalar Ejecutar Salir"
            select opt in $OPCIONES; do
- 
+
 	     #Opción "Instalar del menú"
                if [ "$opt" = "Instalar" ]; then
                  #Instalamos Arduino IDE
