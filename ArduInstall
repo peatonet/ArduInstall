@@ -55,6 +55,6 @@
 	     #Opción erronea del menú
                 else
                   clear
-                  echo opción errónea
+                  echo Por favor, seleccione una de las opciónes disponibles en el menu.
                 fi
                 done
