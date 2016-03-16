@@ -9,7 +9,7 @@
 #Execute: ./ArduInstall (Without sudo neither root permissions)
 
 #Set the options list
-OPCIONES="Install Uninstall Run Exit"
+OPTIONS="Install Uninstall Run Exit"
 select opt in $OPTIONS; do
 
 #Install option
