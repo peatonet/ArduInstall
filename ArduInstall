@@ -4,7 +4,7 @@
 #Author: Antonio Mónaco [toni@peatonet.com]
 #Web: www.peatonet.com/arduinstall/
 #Functions: Install, uninstall, and execute Arduino IDE with Ardublock
-#Version: ArduInstall v1.0 (2015)
+#Version: ArduInstall v1.2 (2015)
 #Change permissions: chmod +x ArduInstall
 #Execute: ./ArduInstall (Without sudo neither root permissions)
 
