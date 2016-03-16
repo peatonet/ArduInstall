@@ -10,7 +10,7 @@
 
 #Set the options list
 OPCIONES="Install Uninstall Run Exit"
-select opt in $OPCIONES; do
+select opt in $OPTIONS; do
 
 #Install option
 if [ "$opt" = "Install" ]; then
