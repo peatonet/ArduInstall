@@ -16,20 +16,23 @@ select opt in $OPCIONES; do
 if [ "$opt" = "Install" ]; then
 	#Arduino IDE install
 	sudo apt-get install -y arduino
+
 	#Download ArduBlock in the last version
 	cd /tmp
 	sudo rm -rf ardu*
 	rm -rf ~/sketchbook
-    wget http://cloud.github.com/downloads/taweili/ardublock/ardublock-all.jar
-    #Create the directories
+        wget http://cloud.github.com/downloads/taweili/ardublock/ardublock-all.jar
+    
+       #Create the directories
 	mkdir ~/sketchbook
-    mkdir ~/sketchbook/tools
-    mkdir ~/sketchbook/tools/ArduBlockTool
-    mkdir ~/sketchbook/tools/ArduBlockTool/tool
-    #Movee ArduBlock.jar to /tool directory
-    mv ardublock-all.jar ~/sketchbook/tools/ArduBlockTool/tool
-	#Run Arduino IDE
-	arduino&
+        mkdir ~/sketchbook/tools
+        mkdir ~/sketchbook/tools/ArduBlockTool
+        mkdir ~/sketchbook/tools/ArduBlockTool/tool
+ 
+       #Movee ArduBlock.jar to /tool directory
+       mv ardublock-all.jar ~/sketchbook/tools/ArduBlockTool/tool
+       #Run Arduino IDE
+       arduino&
 exit
 
 #Uninstall option
@@ -55,10 +58,12 @@ exit
 else
 	#Clear terminal
 	clear
+	
 	#Show error message
 	echo "Please, select a correct option".
 	echo " "
 	#Restart ArduInstall
+	
 	./ArduInstall
 fi
 done
