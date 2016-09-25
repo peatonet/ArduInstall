@@ -1,12 +1,12 @@
 #!/bin/bash
 
-#Script: ArduInstall
+#Script: arduInstall.sh
 #Author: Antonio Mónaco [toni@peatonet.com]
 #Web: www.peatonet.com/arduinstall/
 #Functions: Install, uninstall, and execute Arduino IDE with Ardublock
-#Version: ArduInstall v1.2 (2015)
+#Version: ArduInstall v1.3 (2016)
 #Change permissions: chmod +x ArduInstall
-#Execute: ./ArduInstall (Without sudo neither root permissions)
+#Execute: sh arduInstall.sh (Without sudo neither root permissions)
 
 #Set the options list
 OPTIONS="Install Uninstall Run Exit"
@@ -66,6 +66,6 @@ else
 	echo " "
 	#Restart ArduInstall
 	
-	./ArduInstall
+	./arduInstall
 fi
 done
