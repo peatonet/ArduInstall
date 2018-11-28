@@ -21,7 +21,7 @@ if [ "$opt" = "Install" ]; then
 	cd /tmp
 	sudo rm -rf ardu*
 	rm -rf ~/sketchbook
-        wget http://cloud.github.com/downloads/taweili/ardublock/ardublock-all.jar
+        wget https://datapacket.dl.sourceforge.net/project/ardublock/ardublock-all-20130712.jar
     
        #Create the directories
 	mkdir ~/sketchbook
